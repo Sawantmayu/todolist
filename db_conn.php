@@ -1,9 +1,9 @@
 <?php 
 
-$sName = "localhost";
-$uName = "root";
-$pass = "";
-$db_name = "to_do_list";
+$sName = "todoserver1";
+$uName = "Mayuri";
+$pass = "Azure12345678";
+$db_name = "dbtodo";
 
 try {
     $conn = new PDO("mysql:host=$sName;dbname=$db_name", 
