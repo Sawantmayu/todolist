@@ -1,14 +1,15 @@
 <?php 
 
-$sName = "tcp:todoserver1.database.windows.net,1433";
+$sName = "sqlsrv:Server=tcp:todoserver1.database.windows.net,1433;Database=dbtodo"; // Correct format for SQL Server
 $uName = "Mayuri";
 $pass = "Azure12345678";
-$db_name = "dbtodo";
 
 try {
-    $conn = new PDO("mysql:host=$sName;dbname=$db_name", 
-                    $uName, $pass);
+    // Use the correct connection string format for SQL Server
+    $conn = new PDO($sName, $uName, $pass);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}catch(PDOException $e){
-  echo "Connection failed : ". $e->getMessage();
+    echo "Connection successful!";
+} catch(PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
 }
+?>
