@@ -1,6 +1,6 @@
 <?php 
 
-$sName = "todoserver1";
+$sName = "todoserver1.database.windows.net";
 $uName = "Mayuri";
 $pass = "Azure12345678";
 $db_name = "dbtodo";
